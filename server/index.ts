@@ -1,12 +1,14 @@
 import server from 'server';
-import { get } from 'server/router';
+import { get, post } from 'server/router';
 import { TodoApi } from './api';
-import { Context } from 'server/typings/common';
+import { json, status } from 'server/reply';
 
 
 TodoApi.init();
 
 server({ port: 5555 },
+  get('/', () => "hello world!"),
   get('/todo', async () => await TodoApi.getAllTodos()),
-  get('/todo/:id', async (data: Context) => await TodoApi.getTodo(data))
+  post('/todo', ctx => json(ctx.data)),
+  get('/todo/:id', async (data) => await TodoApi.getTodo(data)),
 );

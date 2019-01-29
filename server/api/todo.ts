@@ -9,11 +9,17 @@ export async function init() {
 
 
 export async function getTodo(data: Context) {
-  const a = await TodoDatabase.findAsync({_id: data.params.id});
+  const a = await TodoDatabase.findAsync({ _id: data.params.id });
   if (a.length > 0) return a[0];
   return status(404).send("Not Found!");
 }
 
 export async function getAllTodos() {
   return await TodoDatabase.findAsync({});
+}
+
+export async function addTodo(ctx: Context) {
+  console.log(ctx);
+  const { data } = ctx;
+  return await TodoDatabase.insertAsync(data);
 }

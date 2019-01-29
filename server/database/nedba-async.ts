@@ -1,4 +1,4 @@
-import NeDBDataStore from "NeDB";
+import NeDBDataStore from "nedb";
 
 export class AsyncNeDBDataStore extends NeDBDataStore {
 
