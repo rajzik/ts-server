@@ -4,6 +4,7 @@
 {"text":"hoge2","done":false,"_id":"4923E0212B3DfnNP"}
 {"text":"hoge","done":false,"_id":"97SmcZ6sL2d3q2ru"}
 {"text":"hoge1","done":false,"_id":"AtkBNtSGVCrsS3lv"}
+{"type":"@todo/create/request","payload":{"text":"ahoj","done":false},"_id":"Dczd0HUy6J4WcNBe"}
 {"text":"hoge1","done":false,"_id":"ISy2v8myzzRwqftR"}
 {"text":"hoge2","done":false,"_id":"IsIadHw7U6aQU8tS"}
 {"text":"hoge2","done":false,"_id":"Kf3DPz1F8jPLjIvA"}
@@ -37,3 +38,5 @@
 {"text":"hoge2","done":false,"_id":"zFjXPBJRvPrkkQoZ"}
 {"text":"hoge","done":false,"_id":"zHjaqrFlsDr7Vwm8"}
 {"text":"hoge2","done":false,"_id":"zongOR0hVRzPP0Ff"}
+{"type":"@todo/create/request","payload":{"text":"ahoj","done":false},"_id":"nYKd3xpilpo458Fi"}
+{"text":"ahoj","done":false,"_id":"hY3kvrO1V7olubp0"}

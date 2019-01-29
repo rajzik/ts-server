@@ -17,7 +17,8 @@
   "dependencies": {
     "@types/nedb": "^1.8.7",
     "@types/server": "^1.0.0",
-    "nedb": "^1.8.0",
-    "server": "^1.0.18"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "nedb": "^1.8.0"
   }
 }

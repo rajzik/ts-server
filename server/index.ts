@@ -1,14 +1,20 @@
-import server from 'server';
-import { get, post } from 'server/router';
+import express from 'express';
+import bodyParser from 'body-parser';
+
 import { TodoApi } from './api';
-import { json, status } from 'server/reply';
+import { router } from './api/todo';
 
 
 TodoApi.init();
 
-server({ port: 5555 },
-  get('/', () => "hello world!"),
-  get('/todo', async () => await TodoApi.getAllTodos()),
-  post('/todo', ctx => json(ctx.data)),
-  get('/todo/:id', async (data) => await TodoApi.getTodo(data)),
-);
+const app = express();
+
+app.use(bodyParser.json(), router);
+
+app.listen(5555);
+
+// server({ port: 5555 },
+//   get('/todo', TodoApi.getAllTodos),
+//   post('/todo', TodoApi.addTodo),
+//   get('/todo/:id', TodoApi.getTodo),
+// );
