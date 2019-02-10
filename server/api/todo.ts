@@ -19,7 +19,6 @@ router.get('/todo', async (_: Request, res: Response) => {
 });
 
 router.post('/todo', async (req: Request, res: Response) => {
-  console.log(req.body);
   res.json(await TodoDatabase.insertAsync(req.body));
 });
 
